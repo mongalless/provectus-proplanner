@@ -11,15 +11,5 @@ RSpec.describe 'Task model', type: :model do
     it 'is valid with valid attributes' do
       expect(goal).to be_valid
     end
-
-    it 'is not valid without title' do
-      task.title = nil
-      expect(task).to_not be_valid
-    end
-
-    it 'is not valid without status' do
-      task.status = nil
-      expect(task).to_not be_valid
-    end
   end
 end

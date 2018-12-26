@@ -48,3 +48,8 @@ gem 'rack-cors', '~> 0.4.0'
 gem 'daemons', '~> 1.2', '>= 1.2.6'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'api-pagination', '~> 4.8', '>= 4.8.1'
+
+# gem 'trailblazer-rails', '~> 2.1', '>= 2.1.6'
+# Used 2.1.6, because in '>= 2.1.6' (2.1.7) calling Trb operations are failing in request tests.
+gem 'trailblazer-rails', '2.1.6'
+gem 'reform-rails', '~> 0.1.7'

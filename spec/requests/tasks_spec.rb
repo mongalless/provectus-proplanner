@@ -10,13 +10,10 @@ RSpec.describe 'Tasks', type: :request do
 
   let(:test_user) { create :user }
   let(:test_goal) { create :goal, user: test_user }
-  let(:test_event) { create :event, goal: test_goal }
+  let(:test_event) { create :event, goal: test_goal, user: test_user }
   let(:test_task) { create :task, event: test_event }
 
   before { allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(test_user) }
-  before { allow_any_instance_of(TasksController).to receive(:goal).and_return(test_goal) }
-  before { allow_any_instance_of(TasksController).to receive(:event).and_return(test_event) }
-  before { allow_any_instance_of(TasksController).to receive(:task).and_return(test_task) }
 
   let(:valid_session) { {} }
 
